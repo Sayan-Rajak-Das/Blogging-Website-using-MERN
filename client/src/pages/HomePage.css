@@ -1,0 +1,55 @@
+/* src/pages/HomePage.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+  margin-left: auto; /* Pushes the buttons to the right side */
+}
+
+.nav-btn {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-btn:hover {
+  background-color: #0056b3;
+}
+
+.main-content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.start-reading-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.start-reading-btn:hover {
+  background-color: #218838;
+}

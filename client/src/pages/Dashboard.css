@@ -1,0 +1,30 @@
+/* src/pages/Dashboard.css */
+.dashboardbody {
+  text-align: center;
+  padding: 20px;
+}
+
+.dashboard h2 {
+  color: #007bff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: #f8f9fa;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+}
