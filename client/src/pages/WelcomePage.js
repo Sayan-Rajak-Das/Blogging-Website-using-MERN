@@ -1,9 +1,9 @@
-// src/pages/HomePage.js
+// src/pages/WelcomePage.js
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './HomePage.css';
+import './WelcomePage.css';
 
-function HomePage() {
+function WelcomePage() {
   const navigate = useNavigate();
 
   // Check if user is authenticated and if they are an admin
@@ -19,7 +19,7 @@ function HomePage() {
   };
 
   return (
-    <div className="homepage">
+    <div className="WelcomePage">
       <nav className="navbar">
         <h1>Blogging Website</h1>
         <div className="nav-buttons">
@@ -55,4 +55,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default WelcomePage;

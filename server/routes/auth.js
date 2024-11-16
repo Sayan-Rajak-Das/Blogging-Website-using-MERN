@@ -7,7 +7,13 @@ const router = express.Router();
 
 // Register a new user
 router.post('/register', async (req, res) => {
-  const { name, email, password, isAdmin } = req.body;
+  const { name, email, password, isAdmin, visibleBlogTypes } = req.body;
+
+  // Validate input data
+  if (!name || !email || !password) {
+    return res.status(400).json({ error: "Name, email, and password are required." });
+  }
+
   try {
     // Check if user already exists
     const existingUser = await User.findOne({ email });
@@ -17,16 +23,29 @@ router.post('/register', async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
+    // If no visibleBlogTypes are provided, default to all blog types
+    const blogTypes = visibleBlogTypes && visibleBlogTypes.length > 0
+      ? visibleBlogTypes
+      : ["Technology", "Health", "Travel", "Education", "Food"];
+
     // Create and save new user
-    const newUser = new User({ name, email, password: hashedPassword, isAdmin });
+    const newUser = new User({
+      name,
+      email,
+      password: hashedPassword,
+      isAdmin,
+      visibleBlogTypes: blogTypes,
+    });
+
     await newUser.save();
 
     res.json({ message: "User registered successfully" });
   } catch (error) {
     console.error("Error in registration:", error);
-    res.status(500).json("Server error");
+    res.status(500).json({ error: "An error occurred while registering the user." });
   }
 });
+
 
 // Login a user
 router.post('/login', async (req, res) => {

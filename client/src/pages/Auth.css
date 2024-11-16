@@ -1,27 +1,69 @@
 /* src/pages/Auth.css */
 .auth-page {
-    text-align: center;
-    margin: 20px;
-  }
-  
-  .auth-page form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .auth-page input {
-    margin: 5px;
-    padding: 8px;
-    width: 250px;
-  }
-  
-  .auth-page button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
+  text-align: center;
+  margin: 20px;
+}
+
+.auth-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-page input {
+  margin: 5px;
+  padding: 8px;
+  width: 250px;
+}
+
+.auth-page button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-page button:hover {
+  background-color: #0056b3;
+}
+
+.blog-types {
+  margin: 15px 0;
+}
+
+.blog-type-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.blog-type-button {
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-size: 14px;
+  position: relative;
+}
+
+.blog-type-button.selected {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+  font-weight: bold;
+}
+
+.blog-type-button:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.blog-type-button.selected:hover {
+  background-color: #218838;
+}

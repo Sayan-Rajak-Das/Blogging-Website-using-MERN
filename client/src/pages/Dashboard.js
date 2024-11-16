@@ -8,7 +8,7 @@ function Dashboard() {
     <div className="dashboard">
 
       <nav className="navbar">
-        <Link to="/" className="home-button">Go to Homepage</Link>
+        <Link to="/" className="home-button">Go to WelcomePage</Link>
       </nav>
       
       <div className="dashboardbody">
